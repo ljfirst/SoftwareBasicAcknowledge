@@ -1,30 +1,33 @@
 git初阶
+
 git 基础：git 分为本地cache、本地库、远程仓库。
 
-? ? ? ?git init —— git 初始化；
+git init —— git 初始化；
 
-? ? ? ?git add —— 将代码从本地cache提交到本地库；
+git add —— 将代码从本地cache提交到本地库；
 
-? ? ? ?git comment ——?将代码从本地库提交到远程仓库，-m “注释”，表示直接添加注释，--amend，表示在上一次提交的 基础上再次提交；
+git comment ——将代码从本地库提交到远程仓库，-m “注释”，表示直接添加注释，--amend，表示在上一次提交的 基础上再次提交；
 
-? ? ? ?git push —— origin “分支名”，把分支上的代码提交到远程origin分支上；
+git push —— origin “分支名”，把分支上的代码提交到远程origin分支上；
 
-? ? ? ?git pull —— 从远程上拉代码到本地；git pull --rebase ，拉取远程代码并跟本地带代码合并。
+git pull —— 从远程上拉代码到本地；git pull --rebase ，拉取远程代码并跟本地带代码合并。
 
-? ? ? ?git branch —— -a，用于查看所有分支，-d “分支名”，删除分支，-vv 查看本地分支对应的远程分支；
+git branch —— -a，用于查看所有分支，-d “分支名”，删除分支，-vv 查看本地分支对应的远程分支；
 
-? ? ? ?git checkout —— git checkout?.，表示将本地cache上的内容删除；git checkout -b '某分支'，切换分支。
+git checkout —— git checkout.，表示将本地cache上的内容删除；git checkout -b '某分支'，切换分支。
 
-? ? ? ?git reset —— git reset “提交的hash”表示将本地库回退到某个提交之前；
+git reset —— git reset “提交的commit-id hash”，表示将本地库回退到某个提交之前；
 
-? ? ? ?git ?status —— 查看目前状况；
+git revert —— git revert“提交的commit-id hash”，表示将远程库回退到某个提交之前，但是作为新的一次提交，不会影响log；
 
-? ? ? ?git diff —— 查看新增的具体内容；
+git status —— 查看目前状况；
 
-? ? ? ?git log —— 查看提交记录，-p xx.java 查看xx.java 单个文件的提交记录；
+git diff —— 查看新增的具体内容；
 
-? ? ? ?git cherry-pick —— 相当于打补丁；
+git log —— 查看提交记录，-p xx.java 查看xx.java 单个文件的提交记录；
 
-? ? ? ?git remote —— -v，显示origin的远程主机地址；git remote add origin "远程地址"，把远程网址新增为origin的代表。
+git cherry-pick —— 相当于打补丁；
 
-? ? ? ?git stash ——? 解决了a分支上未完成代码却想跳转b分支，可以先把a分支代码stash起来，然后跳转b分支；通过git stash list指令查看存在多少stash，git stash pop，弹出stash。
+git remote —— -v，显示origin的远程主机地址；git remote add origin "远程地址"，把远程网址新增为origin的代表。
+
+git stash ——解决了a分支上未完成代码却想跳转b分支，可以先把a分支代码stash起来，然后跳转b分支；通过git stash list指令查看存在多少stash，git stash pop，弹出stash。
