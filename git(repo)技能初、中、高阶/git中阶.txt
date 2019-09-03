@@ -1,0 +1,12 @@
+git中阶
+
+1、git合并多个本地commit作为一次提交。
+
+（1）git rebase -i commitId
+（2）修改需要合并的id,修改pick为squash，退出
+（3）进入commit页面，填写信息
+（4）push
+
+2、git reset --hard 后如何修复。
+
+3、git cherry-pick 用法。
