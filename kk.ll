@@ -1,12 +1,5 @@
 11
 
-22
-
-
-kk2
-
-ghjkl;
-
 yhujkl;
 
 ghjkl;
