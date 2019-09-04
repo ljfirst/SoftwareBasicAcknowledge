@@ -25,3 +25,9 @@ git中阶
 （1）git revert --no-commit commitID2..commitID4  //本次revert保留ID2，回退ID3,4
 （2）git commit -m "description"
 （3）git push origin master
+
+5、
+git branch --set-upstream-to=origin/develop develop
+
+6、git合并分支
+git merge 分支名
