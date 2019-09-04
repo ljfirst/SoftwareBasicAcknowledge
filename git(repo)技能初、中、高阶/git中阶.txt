@@ -32,6 +32,7 @@ git中阶
 6、git合并其他分支
 （1）git merge 分支名
 
+
 7、删除远程分支
 （1）方式一：git push origin --delete 远程分支名  //先删除远程
              git branch -D 本地分支名             //再删除本地
