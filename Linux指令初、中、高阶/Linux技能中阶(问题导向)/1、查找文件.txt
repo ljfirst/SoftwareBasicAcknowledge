@@ -5,38 +5,16 @@
 
 代码实现：
 #!bin/bash
-
-
 Count=1
-
-                          
 for line in $( find -name readme.txt )
-
-                          
 do
-
-                          
 echo "find  ${line}"
-
-                          
 name0=$(printf "%05d" $Count)
-
-                          
 name=${name0:0:5}
-
-                          
 echo $name
-
-
 cp ${line}  "readme"$name".txtnew"
-
-                          
 (( Count=Count+1))
-
-                          
 echo $Count "Rename OK"
-
-                          
 done
 
 脚本释义：
