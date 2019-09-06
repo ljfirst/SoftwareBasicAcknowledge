@@ -1,0 +1,5 @@
+git reset --hard 后如何修复。
+（1）git reflog
+（2）git reset 到某个ID
+（3）git log 查看恢复的commitID
+（4）git checkout . 清除所有修改。

@@ -1,6 +1,4 @@
-powershell技能中阶(问题导向)
-
-1、powershell远程登录并调用脚本
+powershell远程登录并调用脚本
 
 （1）前提条件：
 Enable-PSRemoting –Force          #开启WinRM 服务，不仅启动了 WinRM 服务，还帮我们设置好了防火墙规则

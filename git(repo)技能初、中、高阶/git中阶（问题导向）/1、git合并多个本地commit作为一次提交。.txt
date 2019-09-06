@@ -1,0 +1,5 @@
+git合并多个本地commit作为一次提交。
+（1）git rebase -i commitId（不写commitId，默认记录与远程相差的所有commit）
+（2）修改需要合并的id,修改pick为squash，退出
+（3）进入commit页面，填写信息
+（4）push
