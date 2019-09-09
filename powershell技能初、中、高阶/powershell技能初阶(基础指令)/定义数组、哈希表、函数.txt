@@ -7,11 +7,11 @@
 3、定义函数并使用：
 （1）方式一：
 function s(){
-echo "this is"
+	echo "this is"
 }
 s
 （2）方式二：
 s{
-echo "this is"
+	echo "this is"
 }
 $s
