@@ -1,4 +1,0 @@
-问题描述：将目标文件夹的windows文件全部转换为unix系统的文件。
-
-语句实现：
-find -iname  "*"  -exec dos2unix  {} \;
