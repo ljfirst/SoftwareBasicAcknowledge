@@ -1,8 +1,0 @@
-9、git远程分支查看
-
-git branch -a //查看所有分支
-
-可选参数有 -a -v -vv ,
-
--a表示all，
--v，一个v表示version，版本信息，两个v表示version和远程分支对应关系

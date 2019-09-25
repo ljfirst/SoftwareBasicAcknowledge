@@ -1,2 +1,0 @@
-﻿远程分支跟随
-（1）git branch --set-upstream-to=origin/develop develop

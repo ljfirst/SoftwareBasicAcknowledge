@@ -1,0 +1,26 @@
+
+======跟随
+远程分支跟随
+（1）git branch --set-upstream-to=origin/develop develop
+
+======删除
+删除远程分支
+（1）方式一：git push origin --delete 远程分支名  //先删除远程
+             git branch -D 本地分支名             //再删除本地
+（2）方式二：git push origin :远程分支名          //先删除远程，注意origin后的空格，空格后是：
+             git branch -D 本地分支名             //再删除本地
+
+-----------
+git删除远程文件，并添加到.gitignore
+
+1、git rm --cached xx.tet
+
+2、vim .gitignore  //进入.gitignore文件，加入需要屏蔽的文件
+
+======查看
+git branch -a //查看所有分支
+
+可选参数有 -a -v -vv ,
+
+-a表示all，
+-v，一个v表示version，版本信息，两个v表示version和远程分支对应关系

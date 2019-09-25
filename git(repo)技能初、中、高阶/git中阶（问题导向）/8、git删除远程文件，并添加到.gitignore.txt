@@ -1,5 +1,0 @@
-git删除远程文件，并添加到.gitignore
-
-1、git rm --cached xx.tet
-
-2、vim .gitignore  //进入.gitignore文件，加入需要屏蔽的文件
