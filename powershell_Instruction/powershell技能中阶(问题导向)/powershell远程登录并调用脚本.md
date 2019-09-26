@@ -1,13 +1,17 @@
-powershell远程登录并调用脚本
+# powershell远程登录并调用脚本
 
-（1）前提条件：
-Enable-PSRemoting –Force           #开启WinRM 服务，不仅启动了 WinRM 服务，还帮我们设置好了防火墙规则
-#Get-Service WinRM                 #用于查看winrm service 是否开启。
-#Set-ExecutionPolicy RemoteSigned  #脚本执行策略
+## 前提条件：
++ 开启WinRM 服务，不仅启动了 WinRM 服务，还帮我们设置好了防火墙规则
+~~~
+Enable-PSRemoting –Force    
+~~~       
++ #Get-Service WinRM                 #用于查看winrm service 是否开启。
++ #Set-ExecutionPolicy RemoteSigned  #脚本执行策略
 
-#添加信任方式一：将待访问主机加入本地信任域
+# 添加信任
++ 方式一：将待访问主机加入本地信任域
 #Set-Item wsman:\localhost\Client\TrustedHosts -value a.b.c.d   
-#添加信任方式二：将待访问主机加入本地信任域 
++ 方式二：将待访问主机加入本地信任域 
 #winrm quickconfig                                             
 #winrm set winrm/config/client '@{TrustedHosts="a.b.c.*"}'
 
