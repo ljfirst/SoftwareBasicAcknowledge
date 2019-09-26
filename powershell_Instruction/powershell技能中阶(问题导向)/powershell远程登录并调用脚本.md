@@ -1,34 +1,49 @@
-# powershellÔ¶³ÌµÇÂ¼²¢µ÷ÓÃ½Å±¾
+# powershellè¿œç¨‹ç™»å½•å¹¶è°ƒç”¨è„šæœ¬
 
-## Ç°ÌáÌõ¼ş£º
-+ ¿ªÆôWinRM ·şÎñ£¬²»½öÆô¶¯ÁË WinRM ·şÎñ£¬»¹°ïÎÒÃÇÉèÖÃºÃÁË·À»ğÇ½¹æÔò
+## å‰ææ¡ä»¶ï¼š
++ å¼€å¯WinRM æœåŠ¡ï¼Œä¸ä»…å¯åŠ¨äº† WinRM æœåŠ¡ï¼Œè¿˜å¸®æˆ‘ä»¬è®¾ç½®å¥½äº†é˜²ç«å¢™è§„åˆ™
 ~~~
-Enable-PSRemoting ¨CForce    
+Enable-PSRemoting â€“Force    
 ~~~       
-+ #Get-Service WinRM                 #ÓÃÓÚ²é¿´winrm service ÊÇ·ñ¿ªÆô¡£
-+ #Set-ExecutionPolicy RemoteSigned  #½Å±¾Ö´ĞĞ²ßÂÔ
++ æŸ¥çœ‹winrm service æ˜¯å¦å¼€å¯ã€‚
+~~~
+Get-Service WinRM    
+~~~
++ è„šæœ¬æ‰§è¡Œç­–ç•¥
+~~~
+Set-ExecutionPolicy RemoteSigned
+~~~
 
-# Ìí¼ÓĞÅÈÎ
-+ ·½Ê½Ò»£º½«´ı·ÃÎÊÖ÷»ú¼ÓÈë±¾µØĞÅÈÎÓò
-#Set-Item wsman:\localhost\Client\TrustedHosts -value a.b.c.d   
-+ ·½Ê½¶ş£º½«´ı·ÃÎÊÖ÷»ú¼ÓÈë±¾µØĞÅÈÎÓò 
-#winrm quickconfig                                             
-#winrm set winrm/config/client '@{TrustedHosts="a.b.c.*"}'
+# æ·»åŠ ä¿¡ä»»
++ æ–¹å¼ä¸€ï¼šå°†å¾…è®¿é—®ä¸»æœºåŠ å…¥æœ¬åœ°ä¿¡ä»»åŸŸ
+~~~
+Set-Item wsman:\localhost\Client\TrustedHosts -value a.b.c.d   
+~~~
++ æ–¹å¼äºŒï¼šå°†å¾…è®¿é—®ä¸»æœºåŠ å…¥æœ¬åœ°ä¿¡ä»»åŸŸ 
+~~~
+winrm quickconfig                                             
+winrm set winrm/config/client '@{TrustedHosts="a.b.c.*"}'
+~~~
 
-£¨2£©²ÎÊı£º
-$uname = "administrator"                                                   #administratorÎªÓÃ»§Ãû
-$pwd = ConvertTo-SecureString "111111" -AsPlainText -Force;?               #111111ÎªÃÜÂë
-$cred = New-Object System.Management.Automation.PSCredential($uname,$pwd); #´´½¨×Ô¶¯ÈÏÖ¤¶ÔÏó
+# å‚æ•°
+~~~
+$uname = "administrator"                                                   #administratorä¸ºç”¨æˆ·å
+$pwd = ConvertTo-SecureString "111111" -AsPlainText -Force;?               #111111ä¸ºå¯†ç 
+$cred = New-Object System.Management.Automation.PSCredential($uname,$pwd); #åˆ›å»ºè‡ªåŠ¨è®¤è¯å¯¹è±¡
 $pcname = "192.168.44.129"
+~~~
 
-£¨3£©·½Ê½
-·½Ê½Ò»£ºµÇÂ¼£¨´´½¨Ô¶³ÌÁ´½Ó£©£¬´ËÊ±ÓÃ»§Ïàµ±ÓÚÔÚÔ¶³ÌÁ´½ÓµÄÖ÷»úÉÏÖ±½Ó½øĞĞ²Ù×÷£¨Ö±½ÓÊäÈëÃüÁî²Ù×÷£©
+# ç™»å½•æ–¹å¼
++ æ–¹å¼ä¸€ï¼šç™»å½•ï¼ˆåˆ›å»ºè¿œç¨‹é“¾æ¥ï¼‰ï¼Œæ­¤æ—¶ç”¨æˆ·ç›¸å½“äºåœ¨è¿œç¨‹é“¾æ¥çš„ä¸»æœºä¸Šç›´æ¥è¿›è¡Œæ“ä½œï¼ˆç›´æ¥è¾“å…¥å‘½ä»¤æ“ä½œï¼‰
+~~~
 Enter-PSSession -ComputerName $pcname -Credential $cred 
 Get-process       
-
-·½Ê½¶ş£ºÍ¨¹ı-scriptblockÖ¸ÁîÀ´Ö´ĞĞµ¥¸öÃüÁî
+~~~
++ æ–¹å¼äºŒï¼šé€šè¿‡-scriptblockæŒ‡ä»¤æ¥æ‰§è¡Œå•ä¸ªå‘½ä»¤
+~~~
 Invoke-Command -Credential $cred -ComputerName $pcname  -scriptblock {ipconfig}
-
-·½Ê½Èı£ºÍ¨¹ı-filepath Ô¶³ÌÖ´ĞĞ½Å±¾
-Invoke-Command -Credential $cred -ComputerName $pcname -FilePath C:\runme.ps1  #filepath¿ÉÒÔ¼ÌĞøÖ´ĞĞÆäËûps½Å±¾
-
+~~~
++ æ–¹å¼ä¸‰ï¼šé€šè¿‡-filepath è¿œç¨‹æ‰§è¡Œè„šæœ¬
+~~~
+Invoke-Command -Credential $cred -ComputerName $pcname -FilePath C:\runme.ps1  #filepathå¯ä»¥ç»§ç»­æ‰§è¡Œå…¶ä»–psè„šæœ¬
+~~~
