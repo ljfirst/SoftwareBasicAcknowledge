@@ -14,7 +14,7 @@ Get-Service WinRM
 Set-ExecutionPolicy RemoteSigned
 ~~~
 
-# 添加信任
+## 添加信任
 + 方式一：将待访问主机加入本地信任域
 ~~~
 Set-Item wsman:\localhost\Client\TrustedHosts -value a.b.c.d   
@@ -25,7 +25,7 @@ winrm quickconfig
 winrm set winrm/config/client '@{TrustedHosts="a.b.c.*"}'
 ~~~
 
-# 参数
+## 参数
 ~~~
 $uname = "administrator"                                                   #administrator为用户名
 $pwd = ConvertTo-SecureString "111111" -AsPlainText -Force;?               #111111为密码
@@ -33,7 +33,7 @@ $cred = New-Object System.Management.Automation.PSCredential($uname,$pwd); #创�
 $pcname = "192.168.44.129"
 ~~~
 
-# 登录方式
+## 登录方式
 + 方式一：登录（创建远程链接），此时用户相当于在远程链接的主机上直接进行操作（直接输入命令操作）
 ~~~
 Enter-PSSession -ComputerName $pcname -Credential $cred 
