@@ -1,8 +1,7 @@
-//C#调用powershell脚本
+### C#调用powershell脚本
+~~~
 public class connect{
-
     String connectString = "";
-
     public void connectmethod(){
     	Runspace runspace = RunspaceFactory.CreateRunspace();
     	Pipeline pipeLine = runspace.CreatePipeline();
@@ -19,5 +18,5 @@ public class connect{
 		
 		}
     }
-
 }
+~~~
