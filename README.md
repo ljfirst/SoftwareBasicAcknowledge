@@ -8,7 +8,12 @@
 
 
 #### Project Structure:
-
++ CSharp_Instruction
++ Database_Instruction
++ Linux_Instruction
++ git(repo)_Instruction
++ powershell_Instruction
++ Python_Instruction
 
 ### what's more：
 + my github:
