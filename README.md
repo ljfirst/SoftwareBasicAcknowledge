@@ -7,7 +7,7 @@
 + 最后通过博客前端链接访问我的github，查看具体代码实现。
 
 
-#### Project Structure:
+#### Architecture:
 + CSharp_Instruction
 + Database_Instruction
 + Linux_Instruction
