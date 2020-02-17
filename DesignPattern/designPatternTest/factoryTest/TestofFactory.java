@@ -1,6 +1,7 @@
-package test;
+package factoryTest;
 
-import simplefactory.SimpleFactory;
+import factory.simplefactory.CT1;
+import factory.simplefactory.SimpleFactory;
 
 /** 
  *@author liujun

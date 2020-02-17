@@ -1,5 +1,8 @@
-package test;
-/** 
+package factory.simplefactory;
+
+import factory.Factory;
+
+/**
  *@author liujun
  *@date£º 2019-3-31 ÏÂÎç03:59:35
  *@author¡ªEmail:ljfirst@mail.ustc.edu.cn
@@ -7,7 +10,7 @@ package test;
  *@URL:
  *@version 1.0
  */
-public class CT2 implements ClassTest{
+public class CT2 implements Factory {
 
 	String s = "i am CT2 implements ClassTest";
 	

@@ -1,4 +1,6 @@
-package singlepattern;
+package singleTest;
+
+import single.*;
 
 /**
  *@author liujun
@@ -10,34 +12,40 @@ package singlepattern;
  *Attention:Experiments show that the double locks is faster
  *@version 1.0
  */
-public class SinglePatternTest {
+public class SinglePatternTimeTest {
 
 	public static void main(String[] args) {
 		
 		long begintime = System.currentTimeMillis();
 		for(int i = 0; i < 100000; i++) {
-			HungrySinglePattern.getHungrySinglePattern();
+			HungrySingle.getHungrySinglePattern();
 		}
-		System.out.println("HungrySinglePattern spend:"+(System.currentTimeMillis()-begintime));
+		System.out.println("1 HungrySinglePattern spend:"+(System.currentTimeMillis()-begintime));
 		//==============================
 	    begintime = System.currentTimeMillis();
 		for(int i = 0; i < 100000; i++) {
-			LazySinglePattren.getlLazySinglePattren();
+			LazySingle.getlLazySinglePattren();
 		}
-		System.out.println("LazySinglePattren spend:"+(System.currentTimeMillis()-begintime));
+		System.out.println("2 LazySinglePattren spend:"+(System.currentTimeMillis()-begintime));
 		//==============================
 	    begintime = System.currentTimeMillis();
 		for(int i = 0; i < 100000; i++) {
-			LazySinglePattren.getlLazySinglePattren1();
+			DCLSingletom.getdclSingletom();
 		}
-		System.out.println("LazySinglePattren1 spend:"+(System.currentTimeMillis()-begintime));
+		System.out.println("3 DCLSingletom spend:"+(System.currentTimeMillis()-begintime));
 		//==============================
 		begintime = System.currentTimeMillis();
 		for(int i = 0; i < 100000; i++) {
-			SinglePattern.getsSinglePattern();
+			InnerClassSingletom.getsSinglePattern();
 		}
-		System.out.println("SinglePattern spend:"+(System.currentTimeMillis()-begintime));
-		
+		System.out.println("4 InnerClassSingletom spend:"+(System.currentTimeMillis()-begintime));
+		//==============================
+		begintime = System.currentTimeMillis();
+		for(int i = 0; i < 100000; i++) {
+			EnumSingletom d = EnumSingletom.EnumSingletom;
+		}
+		System.out.println("5 EnumSingletom spend:"+(System.currentTimeMillis()-begintime));
+
 		/*new Thread(new Runnable() {
 			@Override
 			public void run() {
