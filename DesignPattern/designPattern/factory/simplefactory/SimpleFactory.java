@@ -2,21 +2,21 @@ package factory.simplefactory;
 
 import factory.simplefactory.CT1;
 
-/** 
- *@author liujun
- *@date£º 2019-3-31 ÏÂÎç03:51:33
- *@author¡ªEmail:ljfirst@mail.ustc.edu.cn
- *@description:
- *@URL:
- *@version 1.0
+/**
+ * @author liujun
+ * @version 1.0
+ * @dateï¿½ï¿½ 2019-3-31 ï¿½ï¿½ï¿½ï¿½03:51:33
+ * @authorï¿½ï¿½Email:ljfirst@mail.ustc.edu.cn
+ * @description:
+ * @URL:
  */
 public class SimpleFactory {
 
-	public static CT1 createClass() {
+    public static CT1 createClass() {
 
-		System.out.print("SimpleFactory:");
-		return new CT1();
-	}
+        System.out.print("SimpleFactory:");
+        return new CT1();
+    }
 }
 
 

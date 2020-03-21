@@ -1,12 +1,13 @@
 package proxy;
-/** 
- *@author liujun
- *@date： 2018-8-17 上午02:11:55
- *@author—Email:ljfirst@mail.ustc.edu.cn
- *@description:代理模式的接口：ProxyInterface
- *@version 1.0
+
+/**
+ * @author liujun
+ * @version 1.0
+ * @date锟斤拷 2018-8-17 锟斤拷锟斤拷02:11:55
+ * @author锟斤拷Email:ljfirst@mail.ustc.edu.cn
+ * @description:锟斤拷锟斤拷模式锟侥接口ｏ拷ProxyInterface
  */
 public interface ProxyInterface {
 
-	void work();
+    void work();
 }

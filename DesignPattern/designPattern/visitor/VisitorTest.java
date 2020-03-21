@@ -3,26 +3,26 @@ package visitor;
 import java.util.ArrayList;
 import java.util.List;
 
-/** 
- *@author liujun
- *@date£º 2019-1-6 ÏÂÎç04:32:16
- *@author¡ªEmail:ljfirst@mail.ustc.edu.cn
- *@description:
- *@URL:
- *@version 1.0
+/**
+ * @author liujun
+ * @version 1.0
+ * @dateï¿½ï¿½ 2019-1-6 ï¿½ï¿½ï¿½ï¿½04:32:16
+ * @authorï¿½ï¿½Email:ljfirst@mail.ustc.edu.cn
+ * @description:
+ * @URL:
  */
 public class VisitorTest {
 
-	public static void main(String[] args) {
-		List<Accept> Plist = new ArrayList<Accept>();
-		
-		Plist.add(new PositionWaiter("Ð¡ÕÅ·þÎñÔ±", 2000));
-		Plist.add(new PositionManager("Íõ¾­Àí", 10000, 20));
-		Plist.add(new PositionWorker("Àî¹¤", 5000, 30.56));
-		
-		ServiceProvider sp = new ServiceProvider();
-		for (Accept p : Plist) {
-			p.acceptable(sp);
-		}
-	}
+    public static void main(String[] args) {
+        List<Accept> Plist = new ArrayList<Accept>();
+
+        Plist.add(new PositionWaiter("Ð¡ï¿½Å·ï¿½ï¿½ï¿½Ô±", 2000));
+        Plist.add(new PositionManager("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½", 10000, 20));
+        Plist.add(new PositionWorker("ï¿½î¹¤", 5000, 30.56));
+
+        ServiceProvider sp = new ServiceProvider();
+        for (Accept p : Plist) {
+            p.acceptable(sp);
+        }
+    }
 }

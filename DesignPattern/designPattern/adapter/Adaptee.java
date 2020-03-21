@@ -1,33 +1,34 @@
 package adapter;
-/** 
- *@author liujun
- *@date£º 2019-1-24 ÏÂÎç06:25:27
- *@author¡ªEmail:ljfirst@mail.ustc.edu.cn
- *@description:½«TargetµÄmethod3¡¢4ÊÊÅäÎªAdapteeµÄmethod1¡¢2
- *@URL:
- *@version 1.0
+
+/**
+ * @author liujun
+ * @version 1.0
+ * @dateï¿½ï¿½ 2019-1-24 ï¿½ï¿½ï¿½ï¿½06:25:27
+ * @authorï¿½ï¿½Email:ljfirst@mail.ustc.edu.cn
+ * @description:ï¿½ï¿½Targetï¿½ï¿½method3ï¿½ï¿½4ï¿½ï¿½ï¿½ï¿½ÎªAdapteeï¿½ï¿½method1ï¿½ï¿½2
+ * @URL:
  */
 public interface Adaptee {
 
-	public int method1();
-	
-	public String method2();
+    public int method1();
+
+    public String method2();
 }
 
-class Adaptee1 implements Adaptee{
+class Adaptee1 implements Adaptee {
 
-	@Override
-	public int method1() {
-		// TODO Auto-generated method stub
-		System.out.println("Adapter1 implements Adaptee use method1");
-		return 0;
-	}
+    @Override
+    public int method1() {
+        // TODO Auto-generated method stub
+        System.out.println("Adapter1 implements Adaptee use method1");
+        return 0;
+    }
 
-	@Override
-	public String method2() {
-		// TODO Auto-generated method stub
-		System.out.println("Adapter1 implements Adaptee use method2");
-		return null;
-	}
-	
+    @Override
+    public String method2() {
+        // TODO Auto-generated method stub
+        System.out.println("Adapter1 implements Adaptee use method2");
+        return null;
+    }
+
 }

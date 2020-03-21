@@ -1,16 +1,17 @@
 package proxy;
-/** 
- *@author liujun
- *@date£º 2018-7-28 ÏÂÎç08:47:26
- *@author¡ªEmail:ljfirst@mail.ustc.edu.cn
- *@description:´úÀíÄ£Ê½µÄÖ÷Ìå£ºreal
- *@version 1.0
- */
-public class Real implements ProxyInterface{
 
-	@Override
-	public void work() {
-		// TODO Auto-generated method stub
-		System.out.println("i am real, i am doing work");
-	}
+/**
+ * @author liujun
+ * @version 1.0
+ * @dateï¿½ï¿½ 2018-7-28 ï¿½ï¿½ï¿½ï¿½08:47:26
+ * @authorï¿½ï¿½Email:ljfirst@mail.ustc.edu.cn
+ * @description:ï¿½ï¿½ï¿½ï¿½Ä£Ê½ï¿½ï¿½ï¿½ï¿½ï¿½å£ºreal
+ */
+public class Real implements ProxyInterface {
+
+    @Override
+    public void work() {
+        // TODO Auto-generated method stub
+        System.out.println("i am real, i am doing work");
+    }
 }

@@ -1,24 +1,25 @@
 package observer;
-/** 
- *@author liujun
- *@date£º 2018-9-22 ÏÂÎç07:37:22
- *@author¡ªEmail:ljfirst@mail.ustc.edu.cn
- *@description:
- *@version 1.0
+
+/**
+ * @author liujun
+ * @version 1.0
+ * @dateï¿½ï¿½ 2018-9-22 ï¿½ï¿½ï¿½ï¿½07:37:22
+ * @authorï¿½ï¿½Email:ljfirst@mail.ustc.edu.cn
+ * @description:
  */
 public class ObserverTest {
 
-	public static void main(String[] args) {
-		
-		AnimalObservable animal = new AnimalObservable();
-		HumanObserver human = new HumanObserver();
-		DoctorObserver doc = new DoctorObserver();
-		
-		//¼ÓÈë¹Û²ìÕß
-		animal.addObserver(human);
-		animal.addObserver(doc);
-		
-		//¸üÐÂ±»¹Û²ìµÄ²é²Ù×÷
-		animal.eat();
-	}
+    public static void main(String[] args) {
+
+        AnimalObservable animal = new AnimalObservable();
+        HumanObserver human = new HumanObserver();
+        DoctorObserver doc = new DoctorObserver();
+
+        //ï¿½ï¿½ï¿½ï¿½Û²ï¿½ï¿½ï¿½
+        animal.addObserver(human);
+        animal.addObserver(doc);
+
+        //ï¿½ï¿½ï¿½Â±ï¿½ï¿½Û²ï¿½Ä²ï¿½ï¿½ï¿½ï¿½
+        animal.eat();
+    }
 }

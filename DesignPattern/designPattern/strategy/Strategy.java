@@ -1,13 +1,13 @@
 package strategy;
 
-/** 
- *@author liujun
- *@date£º 2018-8-22 ÉÏÎç12:06:52
- *@author¡ªEmail:ljfirst@mail.ustc.edu.cn
- *@description:
- *@version 1.0
+/**
+ * @author liujun
+ * @version 1.0
+ * @dateï¿½ï¿½ 2018-8-22 ï¿½ï¿½ï¿½ï¿½12:06:52
+ * @authorï¿½ï¿½Email:ljfirst@mail.ustc.edu.cn
+ * @description:
  */
 public interface Strategy {
 
-	void method();
+    void method();
 }

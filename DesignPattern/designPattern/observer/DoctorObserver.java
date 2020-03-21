@@ -3,19 +3,19 @@ package observer;
 import java.util.Observable;
 import java.util.Observer;
 
-/** 
- *@author liujun
- *@date£º 2018-9-22 ÏÂÎç08:27:55
- *@author¡ªEmail:ljfirst@mail.ustc.edu.cn
- *@description:
- *@version 1.0
+/**
+ * @author liujun
+ * @version 1.0
+ * @dateï¿½ï¿½ 2018-9-22 ï¿½ï¿½ï¿½ï¿½08:27:55
+ * @authorï¿½ï¿½Email:ljfirst@mail.ustc.edu.cn
+ * @description:
  */
-public class DoctorObserver implements Observer{
+public class DoctorObserver implements Observer {
 
-	@Override
-	public void update(Observable o, Object arg) {
-		// TODO Auto-generated method stub
-		System.out.println("DoctorObserver:" + arg.toString());
-	}
+    @Override
+    public void update(Observable o, Object arg) {
+        // TODO Auto-generated method stub
+        System.out.println("DoctorObserver:" + arg.toString());
+    }
 
 }

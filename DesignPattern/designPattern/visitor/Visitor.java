@@ -1,42 +1,45 @@
 package visitor;
-/** 
- *@author liujun
- *@date£º 2019-1-6 ÏÂÎç04:32:39
- *@author¡ªEmail:ljfirst@mail.ustc.edu.cn
- *@description:
- *@URL:
- *@version 1.0
+
+/**
+ * @author liujun
+ * @version 1.0
+ * @dateï¿½ï¿½ 2019-1-6 ï¿½ï¿½ï¿½ï¿½04:32:39
+ * @authorï¿½ï¿½Email:ljfirst@mail.ustc.edu.cn
+ * @description:
+ * @URL:
  */
 public interface Visitor {
 
-	//·þÎñÔ±µÄ·ÃÎÊ·½·¨
-	void visit(PositionWaiter pw);
-	//¾­ÀíµÄ·ÃÎÊ·½·¨
-	void visit(PositionManager pm);
-	//¹¤ÈËµÄ·ÃÎÊ·½·¨
-	void visit(PositionWorker pworker);
+    //ï¿½ï¿½ï¿½ï¿½Ô±ï¿½Ä·ï¿½ï¿½Ê·ï¿½ï¿½ï¿½
+    void visit(PositionWaiter pw);
+
+    //ï¿½ï¿½ï¿½ï¿½Ä·ï¿½ï¿½Ê·ï¿½ï¿½ï¿½
+    void visit(PositionManager pm);
+
+    //ï¿½ï¿½ï¿½ËµÄ·ï¿½ï¿½Ê·ï¿½ï¿½ï¿½
+    void visit(PositionWorker pworker);
 }
 
-class ServiceProvider implements Visitor{
+class ServiceProvider implements Visitor {
 
-	@Override
-	public void visit(PositionWaiter pw) {
-		// TODO Auto-generated method stub
-		System.out.println("i am PositionWaiter");
-		System.out.println(pw.PName);
-	}
+    @Override
+    public void visit(PositionWaiter pw) {
+        // TODO Auto-generated method stub
+        System.out.println("i am PositionWaiter");
+        System.out.println(pw.PName);
+    }
 
-	@Override
-	public void visit(PositionManager pm) {
-		// TODO Auto-generated method stub
-		System.out.println("i am PositionManager");
-		System.out.println(pm.stock);
-	}
+    @Override
+    public void visit(PositionManager pm) {
+        // TODO Auto-generated method stub
+        System.out.println("i am PositionManager");
+        System.out.println(pm.stock);
+    }
 
-	@Override
-	public void visit(PositionWorker pworker) {
-		// TODO Auto-generated method stub
-		System.out.println("i am PositionWorker");
-		System.out.println(pworker.subsidy);
-	}
+    @Override
+    public void visit(PositionWorker pworker) {
+        // TODO Auto-generated method stub
+        System.out.println("i am PositionWorker");
+        System.out.println(pworker.subsidy);
+    }
 }

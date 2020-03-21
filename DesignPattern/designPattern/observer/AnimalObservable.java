@@ -2,20 +2,20 @@ package observer;
 
 import java.util.Observable;
 
-/** 
- *@author liujun
- *@date£º 2018-9-22 ÏÂÎç07:39:06
- *@author¡ªEmail:ljfirst@mail.ustc.edu.cn
- *@description:
- *@version 1.0
+/**
+ * @author liujun
+ * @version 1.0
+ * @dateï¿½ï¿½ 2018-9-22 ï¿½ï¿½ï¿½ï¿½07:39:06
+ * @authorï¿½ï¿½Email:ljfirst@mail.ustc.edu.cn
+ * @description:
  */
-public class AnimalObservable extends Observable{
+public class AnimalObservable extends Observable {
 
-	public void eat() {
-		// TODO Auto-generated method stub
-		System.out.println("Animal eat");
-		
-		super.setChanged();
-		super.notifyObservers("AnimalObservable eat");
-	}
+    public void eat() {
+        // TODO Auto-generated method stub
+        System.out.println("Animal eat");
+
+        super.setChanged();
+        super.notifyObservers("AnimalObservable eat");
+    }
 }

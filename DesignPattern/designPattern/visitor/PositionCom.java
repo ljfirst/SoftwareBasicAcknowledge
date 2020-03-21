@@ -1,94 +1,109 @@
 package visitor;
-/** 
- *@author liujun
- *@date£º 2019-1-6 ÏÂÎç04:33:14
- *@author¡ªEmail:ljfirst@mail.ustc.edu.cn
- *@description:
- *@URL:
- *@version 1.0
+
+/**
+ * @author liujun
+ * @version 1.0
+ * @dateï¿½ï¿½ 2019-1-6 ï¿½ï¿½ï¿½ï¿½04:33:14
+ * @authorï¿½ï¿½Email:ljfirst@mail.ustc.edu.cn
+ * @description:
+ * @URL:
  */
 
-//¹«Ë¾Ö°Î»µÄÊý¾Ý½á¹¹
+//ï¿½ï¿½Ë¾Ö°Î»ï¿½ï¿½ï¿½ï¿½ï¿½Ý½á¹¹
 public class PositionCom {
-	String PName;
-	int Salary;
-	public PositionCom(String PName, int Salary) {
-		// TODO Auto-generated constructor stub
-		this.PName = PName;
-		this.Salary = Salary;
-	}
-	public String getPName() {
-		return PName;
-	}
-	public void setPName(String pName) {
-		PName = pName;
-	}
-	public int getSalary() {
-		return Salary;
-	}
-	public void setSalary(int salary) {
-		Salary = salary;
-	}
+    String PName;
+    int Salary;
+
+    public PositionCom(String PName, int Salary) {
+        // TODO Auto-generated constructor stub
+        this.PName = PName;
+        this.Salary = Salary;
+    }
+
+    public String getPName() {
+        return PName;
+    }
+
+    public void setPName(String pName) {
+        PName = pName;
+    }
+
+    public int getSalary() {
+        return Salary;
+    }
+
+    public void setSalary(int salary) {
+        Salary = salary;
+    }
 }
 
-//½ÓÊÜÕß
-interface Accept{
+//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+interface Accept {
 
-	void acceptable(Visitor v);
-}
-//·þÎñÔ±µÄÊý¾Ý½á¹¹
-class PositionWaiter extends PositionCom implements Accept{
-
-	public PositionWaiter(String PName, int Salary) {
-		super(PName, Salary);
-		// TODO Auto-generated constructor stub
-	}
-
-	@Override
-	public void acceptable(Visitor v) {
-		// TODO Auto-generated method stub
-		v.visit(this);
-	}
+    void acceptable(Visitor v);
 }
 
-//¾­ÀíµÄÊý¾Ý½á¹¹
-class PositionManager extends PositionCom implements Accept{
+//ï¿½ï¿½ï¿½ï¿½Ô±ï¿½ï¿½ï¿½ï¿½ï¿½Ý½á¹¹
+class PositionWaiter extends PositionCom implements Accept {
 
-	int stock;
-	public PositionManager(String PName, int Salary, int stock) {
-		super(PName, Salary);
-		this.stock = stock;
-	}
-	public int getStock() {
-		return stock;
-	}
-	public void setStock(int stock) {
-		this.stock = stock;
-	}
-	@Override
-	public void acceptable(Visitor v) {
-		// TODO Auto-generated method stub
-		v.visit(this);
-	}
+    public PositionWaiter(String PName, int Salary) {
+        super(PName, Salary);
+        // TODO Auto-generated constructor stub
+    }
+
+    @Override
+    public void acceptable(Visitor v) {
+        // TODO Auto-generated method stub
+        v.visit(this);
+    }
 }
 
-//¹¤ÈËµÄÊý¾Ý½á¹¹
-class PositionWorker extends PositionCom implements Accept{
+//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ý½á¹¹
+class PositionManager extends PositionCom implements Accept {
 
-	double subsidy;
-	public PositionWorker(String PName, int Salary, double subsidy) {
-		super(PName, Salary);
-		this.subsidy = subsidy;
-	}
-	public double getSubsidy() {
-		return subsidy;
-	}
-	public void setSubsidy(double subsidy) {
-		this.subsidy = subsidy;
-	}
-	@Override
-	public void acceptable(Visitor v) {
-		// TODO Auto-generated method stub
-		v.visit(this);
-	}
+    int stock;
+
+    public PositionManager(String PName, int Salary, int stock) {
+        super(PName, Salary);
+        this.stock = stock;
+    }
+
+    public int getStock() {
+        return stock;
+    }
+
+    public void setStock(int stock) {
+        this.stock = stock;
+    }
+
+    @Override
+    public void acceptable(Visitor v) {
+        // TODO Auto-generated method stub
+        v.visit(this);
+    }
+}
+
+//ï¿½ï¿½ï¿½Ëµï¿½ï¿½ï¿½ï¿½Ý½á¹¹
+class PositionWorker extends PositionCom implements Accept {
+
+    double subsidy;
+
+    public PositionWorker(String PName, int Salary, double subsidy) {
+        super(PName, Salary);
+        this.subsidy = subsidy;
+    }
+
+    public double getSubsidy() {
+        return subsidy;
+    }
+
+    public void setSubsidy(double subsidy) {
+        this.subsidy = subsidy;
+    }
+
+    @Override
+    public void acceptable(Visitor v) {
+        // TODO Auto-generated method stub
+        v.visit(this);
+    }
 }

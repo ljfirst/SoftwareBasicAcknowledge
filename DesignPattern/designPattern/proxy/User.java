@@ -1,17 +1,18 @@
 package proxy;
-/** 
- *@author liujun
- *@date£º 2018-8-17 ÉÏÎç02:15:55
- *@author¡ªEmail:ljfirst@mail.ustc.edu.cn
- *@description:ÓÃ»§²âÊÔÀà
- *@version 1.0
+
+/**
+ * @author liujun
+ * @version 1.0
+ * @dateï¿½ï¿½ 2018-8-17 ï¿½ï¿½ï¿½ï¿½02:15:55
+ * @authorï¿½ï¿½Email:ljfirst@mail.ustc.edu.cn
+ * @description:ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
  */
 public class User {
 
-	public static void main(String[] args) {
-		
-		ProxyInterface r = new Real();
-		ProxyInterface p = new Proxy(r);
-		p.work();
-	}
+    public static void main(String[] args) {
+
+        ProxyInterface r = new Real();
+        ProxyInterface p = new Proxy(r);
+        p.work();
+    }
 }

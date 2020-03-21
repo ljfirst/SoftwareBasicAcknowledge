@@ -3,19 +3,19 @@ package factory.simplefactory;
 import factory.Factory;
 
 /**
- *@author liujun
- *@date£º 2019-3-31 ÏÂÎç03:53:12
- *@author¡ªEmail:ljfirst@mail.ustc.edu.cn
- *@description:
- *@URL:
- *@version 1.0
+ * @author liujun
+ * @version 1.0
+ * @dateï¿½ï¿½ 2019-3-31 ï¿½ï¿½ï¿½ï¿½03:53:12
+ * @authorï¿½ï¿½Email:ljfirst@mail.ustc.edu.cn
+ * @description:
+ * @URL:
  */
 public class CT1 implements Factory {
 
-	String s = "i am CT1 implements ClassTest";
-	
-	public void method() {
+    String s = "i am CT1 implements ClassTest";
 
-		System.out.println(s);
-	}
+    public void method() {
+
+        System.out.println(s);
+    }
 }

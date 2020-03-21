@@ -1,33 +1,34 @@
 package adapter;
-/** 
- *@author liujun
- *@date£º 2019-1-24 ÏÂÎç06:25:09
- *@author¡ªEmail:ljfirst@mail.ustc.edu.cn
- *@description:
- *@URL:
- *@version 1.0
+
+/**
+ * @author liujun
+ * @version 1.0
+ * @dateï¿½ï¿½ 2019-1-24 ï¿½ï¿½ï¿½ï¿½06:25:09
+ * @authorï¿½ï¿½Email:ljfirst@mail.ustc.edu.cn
+ * @description:
+ * @URL:
  */
 public interface Target {
 
-	public int method3();
-	
-	public String method4();
+    public int method3();
+
+    public String method4();
 }
 
-class Target1 implements Target{
+class Target1 implements Target {
 
-	@Override
-	public int method3() {
-		// TODO Auto-generated method stub
-		System.out.println("Target1 implements Target use method3");
-		return 0;
-	}
+    @Override
+    public int method3() {
+        // TODO Auto-generated method stub
+        System.out.println("Target1 implements Target use method3");
+        return 0;
+    }
 
-	@Override
-	public String method4() {
-		// TODO Auto-generated method stub
-		System.out.println("Target1 implements Target use method4");
-		return null;
-	}
-	
+    @Override
+    public String method4() {
+        // TODO Auto-generated method stub
+        System.out.println("Target1 implements Target use method4");
+        return null;
+    }
+
 }

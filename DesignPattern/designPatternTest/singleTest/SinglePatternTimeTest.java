@@ -3,48 +3,47 @@ package singleTest;
 import single.*;
 
 /**
- *@author liujun
- *@date£º 2018-4-22 Time£ºÉÏÎç12:04:32
- *@author¡ªEmail:ljfirst@mail.ustc.edu.cn
- *@description:1.SinglePattern
- *             2.HungrySinglePattern
- *             3.LazySinglePattren
- *Attention:Experiments show that the double locks is faster
- *@version 1.0
+ * @author liujun
+ * @version 1.0
+ * @dateï¿½ï¿½ 2018-4-22 Timeï¿½ï¿½ï¿½ï¿½ï¿½ï¿½12:04:32
+ * @authorï¿½ï¿½Email:ljfirst@mail.ustc.edu.cn
+ * @description:1.SinglePattern 2.HungrySinglePattern
+ * 3.LazySinglePattren
+ * Attention:Experiments show that the double locks is faster
  */
 public class SinglePatternTimeTest {
 
-	public static void main(String[] args) {
-		
-		long begintime = System.currentTimeMillis();
-		for(int i = 0; i < 100000; i++) {
-			HungrySingle.getHungrySinglePattern();
-		}
-		System.out.println("1 HungrySinglePattern spend:"+(System.currentTimeMillis()-begintime));
-		//==============================
-	    begintime = System.currentTimeMillis();
-		for(int i = 0; i < 100000; i++) {
-			LazySingle.getlLazySinglePattren();
-		}
-		System.out.println("2 LazySinglePattren spend:"+(System.currentTimeMillis()-begintime));
-		//==============================
-	    begintime = System.currentTimeMillis();
-		for(int i = 0; i < 100000; i++) {
-			DCLSingletom.getdclSingletom();
-		}
-		System.out.println("3 DCLSingletom spend:"+(System.currentTimeMillis()-begintime));
-		//==============================
-		begintime = System.currentTimeMillis();
-		for(int i = 0; i < 100000; i++) {
-			InnerClassSingletom.getsSinglePattern();
-		}
-		System.out.println("4 InnerClassSingletom spend:"+(System.currentTimeMillis()-begintime));
-		//==============================
-		begintime = System.currentTimeMillis();
-		for(int i = 0; i < 100000; i++) {
-			EnumSingletom d = EnumSingletom.EnumSingletom;
-		}
-		System.out.println("5 EnumSingletom spend:"+(System.currentTimeMillis()-begintime));
+    public static void main(String[] args) {
+
+        long begintime = System.currentTimeMillis();
+        for (int i = 0; i < 100000; i++) {
+            HungrySingle.getHungrySinglePattern();
+        }
+        System.out.println("1 HungrySinglePattern spend:" + (System.currentTimeMillis() - begintime));
+        //==============================
+        begintime = System.currentTimeMillis();
+        for (int i = 0; i < 100000; i++) {
+            LazySingle.getlLazySinglePattren();
+        }
+        System.out.println("2 LazySinglePattren spend:" + (System.currentTimeMillis() - begintime));
+        //==============================
+        begintime = System.currentTimeMillis();
+        for (int i = 0; i < 100000; i++) {
+            DCLSingletom.getdclSingletom();
+        }
+        System.out.println("3 DCLSingletom spend:" + (System.currentTimeMillis() - begintime));
+        //==============================
+        begintime = System.currentTimeMillis();
+        for (int i = 0; i < 100000; i++) {
+            InnerClassSingletom.getsSinglePattern();
+        }
+        System.out.println("4 InnerClassSingletom spend:" + (System.currentTimeMillis() - begintime));
+        //==============================
+        begintime = System.currentTimeMillis();
+        for (int i = 0; i < 100000; i++) {
+            EnumSingletom d = EnumSingletom.EnumSingletom;
+        }
+        System.out.println("5 EnumSingletom spend:" + (System.currentTimeMillis() - begintime));
 
 		/*new Thread(new Runnable() {
 			@Override
@@ -81,5 +80,5 @@ public class SinglePatternTimeTest {
 				System.out.println("HungrySinglePattern spend:"+(System.currentTimeMillis()-begintime));
 			}
 		}).start();*/
-	}
+    }
 }

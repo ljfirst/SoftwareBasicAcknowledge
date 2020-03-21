@@ -1,25 +1,26 @@
 package proxy;
-/** 
- *@author liujun
- *@date£º 2018-8-17 ÉÏÎç02:12:54
- *@author¡ªEmail:ljfirst@mail.ustc.edu.cn
- *@description:´úÀíÀà£¬ÆäÖ÷ÒªÊµÏÖÖ÷ÌåÊÇ±»´úÀíÀàµÄ·½·¨¡£
- *@version 1.0
- */
-public class Proxy implements ProxyInterface{
 
-	ProxyInterface p;
-	
-	public Proxy(ProxyInterface r) {
-		// TODO Auto-generated constructor stub
-		p = r;
-	}
-	
-	@Override
-	public void work() {
-		// TODO Auto-generated method stub
-		System.out.println("i am Proxy, i am help real's work¡£");
-		p.work();
-		System.out.println("i am Proxy, work end£¡");
-	}
+/**
+ * @author liujun
+ * @version 1.0
+ * @dateï¿½ï¿½ 2018-8-17 ï¿½ï¿½ï¿½ï¿½02:12:54
+ * @authorï¿½ï¿½Email:ljfirst@mail.ustc.edu.cn
+ * @description:ï¿½ï¿½ï¿½ï¿½ï¿½à£¬ï¿½ï¿½ï¿½ï¿½ÒªÊµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ç±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä·ï¿½ï¿½ï¿½ï¿½ï¿½
+ */
+public class Proxy implements ProxyInterface {
+
+    ProxyInterface p;
+
+    public Proxy(ProxyInterface r) {
+        // TODO Auto-generated constructor stub
+        p = r;
+    }
+
+    @Override
+    public void work() {
+        // TODO Auto-generated method stub
+        System.out.println("i am Proxy, i am help real's workï¿½ï¿½");
+        p.work();
+        System.out.println("i am Proxy, work endï¿½ï¿½");
+    }
 }
